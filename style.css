@@ -73,7 +73,7 @@ meter {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
-  -webkit-line-break: after-white-space;
+  -webkit-line-break: after-white-space;  
   -webkit-user-select: auto;
 }
 
@@ -83,6 +83,14 @@ meter {
 }
 /* Fin de CSS reset */
 
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('/assets/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('/assets/fonts/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
 
 /* ************************* */
 /*      Variables            */
@@ -93,9 +101,13 @@ meter {
   --clr-claro: 49 92% 85%;
   --clr-amarillo: 42 89% 70%;
   --clr-rojo: 5 78% 68%;
-  --clr-azul: 149 29% 72%;
+  --clr-verde: 149 29% 72%;
   --clr-oscuro: 0 0% 22%;
   --clr-negro: 0 0% 0%;
+
+  --padding-block: 3em;
+
+
 }
 
 /* ************************* */
@@ -105,7 +117,14 @@ meter {
 
 /* Colores */
 .fondo-amarillo {
-  background-color: hsla(var(--clr-amarillo));
+  background-color: hsl(var(--clr-amarillo));
+}
+.fondo-verde {
+  background-color: hsl(var(--clr-verde));
+}
+
+body {
+  font-family: 'Mona Sans';
 }
 
 .flex {
@@ -142,3 +161,49 @@ meter {
   z-index: 1000;
   visibility: hidden;
 }
+
+/* ************************* */
+/*      Hero                 */
+/* ************************* */
+
+.hero-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-block: var(--padding-block);
+}
+
+.hero-img-container {
+  width: 170px;
+  height: auto;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 10px solid hsla(var(--clr-rojo));
+  border-radius: 50%;
+  background-color: hsla(var(--clr-claro));
+}
+
+.hero-img-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+ font-size: 2rem;
+  
+}
+
+/* ************************* */
+/*      Sobre mi             */
+/* ************************* */
+
+.sobre-mi {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-block: var(--padding-block);
+}
+

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="preload" href="/assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
   <title>Portafolio de Cathy</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
           <li>Contactos</li>
         </ul>
       </nav>
-      
+  
       <template id="burger-template">
         <button id="burger-btn" type="button" aria-expanded="false" aria-label="Menu" aria-controls="main-nav">
           <svg width="24" height="24" aria-hidden="true">
@@ -31,6 +32,26 @@
 
     </div>
   </header>
+  <div>
+    <div class="container hero-container flex">
+      <div class="hero-img-container">
+        <img src="assets/images/caty.png" alt="Foto de mi">
+      </div>
+      <h1 class="hero-title">Hi there! I’m Cathy, Front End Developer and lifelong learner</h1>
+    </div>
+  </div>
+  <section class="fondo-verde">
+    <div class="container sobre-mi flex">
+      <h2>Sobre mi</h2>
+      <p>
+        “Hi there! I’m Josh. I’m a passionate introvert who loves building things with code.My first experience with programming was when I was 12, but I didn’t last long: I was a big fan of computer-animated TV shows like Reboot, and I decided I wanted to do “computer graphics”. My mom bought me a C++ Reference Manual. It was several hundred pages, and totally inscrutable to me.Years later, I decided to try learning Python. It was a radically different experience. I distinctly remember the moment it clicked; I was watching The Price is Right, and they were spinning the big wheel. A contestant landed on 0.70
+      </p> 
+        
+      <p>
+          move?It occurred to me: I had the skills to build a simulation! So I threw together a Python script that would run thousands of simulations to work out what the right answer was. 15 minutes later, I had the answer. My burgeoning skillset was a superpower: I could derive answers that were previously off-limits to me. It was magic.Since then, I’ve been honing my skills and learning Javascript. I recently graduated from Apex College’s 12-week intensive Web Development Bootcamp program[…]”
+      </p>
+    </div>
+  </section>
   
 </body>
 </html>
