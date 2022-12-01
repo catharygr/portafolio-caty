@@ -10,10 +10,10 @@
 </head>
 <body>
 
-  <header class="fondo-asento color-claro">
+  <header class="fondo-asento-claro color-oscuro">
     <div class="container flex header-container">
       <div>
-        <p class="fs-600 f-str-75 f-wei-600">Portafolio de this.Catary</p>
+        <p class="fs-600 f-str-75 f-wei-600">this.cataryGarciaRivas</p>
       </div>
       <nav>
         <ul class="flex nav-principal fondo-amarillo">
@@ -36,18 +36,20 @@
 
 
 
-    <section class="container hero-container flex">
+  <section class="hero-section">
+    <div class="hero-container container flex">
       <div class="hero-img-container fondo-asento-claro">
         <img  src="assets/images/caty.png" alt="Foto de mi">
       </div>
       <h1 class="hero-title fs-900 f-str-75 f-wei-600 lh-small color-oscuro">Hola soy Catary, desarrolladora FrontEnd y algo más...</h1>
-    </section>
+    </div>
+  </section>
 
 
 
   <section class="fondo-oscuro color-claro">
     <div class="container sobre-mi flex">
-      <h2 class="fs-800 f-str-75 f-wei-600">Sobre mi</h2>
+      <h2 class="fs-800 f-str-75 f-wei-600 uppercase">Sobre mi</h2>
       <p>
         “¡Hola! me llaman Caty, un poco introvertida pero muy apasionada al mundo de la codificación. Mi primera experiencia con la programación fue cuando tenía 12 años, pero no duró mucho: era un granfan of computer-animated TV shows like Reboot, and I decided I wanted to do “computer graphics”. My mom bought me a C++ Reference Manual. It was several hundred pages, and totally inscrutable to me.Years later, I decided to try learning Python. It was a radically different experience. I distinctly remember the moment it clicked; I was watching The Price is Right, and they were spinning the big wheel. A contestant landed on 0.70
       </p> 
@@ -61,8 +63,8 @@
 
   <main>
     <section class="fondo-asento">
-      <div class="container mis-habilidades flex color-claro">
-        <h2 class="fs-800 f-str-75 f-wei-600 ">My Skils</h2>
+      <div class="container mis-habilidades flex color-blanco">
+        <h2 class="fs-800 f-str-75 f-wei-600 uppercase">My Skils</h2>
 
           <ul class="ul-habilidades flex fs-500 f-wei-600">
             <li>Javascript ES6</li>
@@ -78,26 +80,66 @@
 
     <section>
       <div class="container mis-proyectos flex color-oscuro">
-        <h2 class="fs-800 f-str-75 f-wei-600">
+        <h2 class="fs-800 f-str-75 f-wei-600 uppercase">
           Mis proyectos
         </h2>
-        <div class="cards-container">
-          <div class="card-proyecto flow">
+
+        <div class="cards-container flex">
+
+          <div class="card-proyecto flow fondo-asento-claro">
             <img src="/assets/images/img-card.jpeg" alt="">
-            <h3 class="fs-600 f-str-75 f-wei-600">Clínica Dental Blancodent</h3>
-            <p>Web site of Dental Clinic built with CSS, HTML and a splash of JS using @11ty statis site generator and nunjucs template language</p>
-            <p><a href="#">Check the proyect detail page</a></p>
+            <div class="card-contenido flow">
+              <h3 class="fs-600 f-str-75 f-wei-600 uppercase">Clínica Dental Blancodent</h3>
+              <p>Web site of Dental Clinic built with CSS, HTML and a splash of JS using @11ty statis site generator and nunjucs template language</p>
+              <p><a href="#">Check the proyect detail page</a></p>
+            </div>
           </div>
-
-
-
-
-
-
+          <div class="card-proyecto flow fondo-asento-claro">
+            <img src="/assets/images/img-card.jpeg" alt="">
+            <div class="card-contenido flow">
+              <h3 class="fs-600 f-str-75 f-wei-600 uppercase">Clínica Dental Blancodent</h3>
+              <p>Web site of Dental Clinic built with CSS, HTML and a splash of JS using @11ty statis site generator and nunjucs template language</p>
+              <p><a href="#">Check the proyect detail page</a></p>
+            </div>
+          </div>
+          <div class="card-proyecto flow fondo-asento-claro">
+            <img src="/assets/images/img-card.jpeg" alt="">
+            <div class="card-contenido flow">
+              <h3 class="fs-600 f-str-75 f-wei-600 uppercase">Clínica Dental Blancodent</h3>
+              <p>Web site of Dental Clinic built with CSS, HTML and a splash of JS using @11ty statis site generator and nunjucs template language</p>
+              <p><a href="#">Check the proyect detail page</a></p>
+            </div>
+          </div>
 
         </div>
       </div>
     </section>
+
+    <section class="fondo-asento">
+      <div class="container flex contact-container">
+        <div class="flex contact-contenido color-blanco">
+          <h2 class="fs-800 f-str-75 f-wei-600 uppercase">Let’s make it work</h2>
+          <p>If you are looking for a junior developer to work with or just want to connect or ask a question, feel free to reach out.</p>
+          <p class="f-wei-600 color-oscuro">github | mastadon | twitter | linkedin </p>
+        </div>
+  
+        <div>
+          <form class="contact-form fondo-oscuro color-claro flow" name="contacto" method="POST" data-netlify="true">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo le gustaria que le llamase">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Introduce tu dirección de correo">
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            <button class="btn fondo-asento-claro color-oscuro fs-500 f-wei-600">Muchas gracias</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+    <footer>
+        <p class="color-oscuro fs-200">Hecho en canarias con amor</p>
+    </footer>
   </main>
   
 </body>

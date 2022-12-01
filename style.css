@@ -102,7 +102,7 @@ meter {
   --clr-asento: 10 50% 79%;
   --clr-asento-claro: 31 61% 89%;
   --clr-claro: 50 37% 97%;
-  --clr-negro: 0 0% 11%;
+  --clr-negro: 0 0% 20%;
   --clr-blanco: 0 0% 100%;
 
   /* Formatos de letras */
@@ -113,7 +113,7 @@ meter {
   --fs-500: 1.25rem;
   --fs-400: 1rem;
   --fs-300: 0.8rem;
-  --fs-200: 064rem;
+  --fs-200: 0.64rem;
 
   --f-str-75: 75%;
   --f-str-100: 100%;
@@ -128,11 +128,11 @@ meter {
   --lh-big: 1.8;
 
 
-  /* Espacios blancos */
+  /* Varios */
   --padding-block: 3em;
   --margin-texto: 1em;
-
-
+  --border-radius: 7px;
+  --box-shadow: 0 5px 10px 0 hsl(var(--clr-oscuro) / 0.6);
 }
 
 /* ************************* */
@@ -251,12 +251,17 @@ body {
   margin-inline: auto;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 
 /* ************************* */
 /*      Header y Menú        */
 /* ************************* */
-
-
+header {
+  border-bottom: 1px solid hsl(var(--clr-oscuro));
+}
 .header-container {
   justify-content: space-between;
   align-items: center;
@@ -281,6 +286,18 @@ body {
 /*      Hero                 */
 /* ************************* */
 
+.hero-section {
+  background-image: url(/assets/images/fondo-header-movil.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media ( min-width: 650px) {
+  .hero-section {
+    background-image: url(/assets/images/fondo-header-desktop.svg);
+  }
+}
+
 .hero-container {
   flex-direction: column;
   justify-content: center;
@@ -295,8 +312,9 @@ body {
   height: auto;
   aspect-ratio: 1;
   overflow: hidden;
-  border: 10px solid hsla(var(--clr-asento));
+  border: 10px solid hsla(var(--clr-oscuro));
   border-radius: 50%;
+  box-shadow: var(--box-shadow);
 }
 
 .hero-img-container > img {
@@ -311,7 +329,8 @@ body {
 
 .sobre-mi,
 .mis-habilidades,
-.mis-proyectos {
+.mis-proyectos,
+.contact-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -328,3 +347,72 @@ body {
 /*      Mis proyectos        */
 /* ************************* */
 
+.cards-container {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-proyecto {
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.card-contenido {
+  padding: 0.5em 1em 1em;
+
+}
+
+/* ************************* */
+/*      Contactos-form       */
+/* ************************* */
+
+
+
+.contact-contenido {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.contact-form {
+  padding: 1.5em;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.contact-form :where(input, textarea) {
+  background-color: hsl(var(--clr-claro));
+  width: 100%;
+  padding: 0.5em;
+  border-radius: var(--border-radius);
+}
+
+.contact-form input::placeholder {
+  color: hsl(var(--clr-oscuro) / 0.6);
+  font-size: var(--fs-300);
+}
+
+.contact-form label {
+  font-size: var(--fs-300);
+}
+
+.btn {
+  padding: 0.5em;
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin-block: var(--margin-texto);
+  text-align: center;
+}
+
+/* ************************* */
+/*      Footer               */
+/* ************************* */
+
+footer {
+  text-align: center;
+  letter-spacing: 2px;
+  padding-block: var(--padding-block);
+
+}
