@@ -106,6 +106,7 @@ meter {
   --clr-blanco: 0 0% 100%;
 
   /* Formatos de letras */
+  --fs-hero: clamp(3.052rem, 6vw, 4.5rem);
   --fs-900: 3.052rem;
   --fs-800: 2.441rem;
   --fs-700: 1.953rem;
@@ -129,7 +130,7 @@ meter {
 
 
   /* Varios */
-  --padding-block: 3em;
+  --padding-block: clamp( 3rem, 6vw , 5rem);
   --margin-texto: 1em;
   --border-radius: 7px;
   --box-shadow: 0 5px 10px 0 hsl(var(--clr-oscuro) / 0.6);
@@ -183,6 +184,10 @@ body {
 }
 
 /* Formatos de letras */
+
+.fs-hero {
+  font-size: var(--fs-hero);
+}
 .fs-900 {
   font-size: var(--fs-900);
 }
@@ -359,16 +364,28 @@ header {
     .mis-habilidades {
       flex-direction: row;
       justify-content: flex-start;
-      align-items: flex-start;
+
     }
     .sobre-mi h2,
     .mis-habilidades h2 {
       flex-basis: 200px;
       flex-shrink: 0;
     }
+    .sobre-mi h2 {
+      align-self: flex-start;
+    }
     .ul-habilidades {
       flex-direction: row;
-      
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .ul-habilidades li {
+      position: relative;
+    }
+    .ul-habilidades li:not(:last-child)::after {
+      content: "|";
+      position: absolute;
+      right: -0.7rem;
     }
 }
 
@@ -390,6 +407,34 @@ header {
 .card-contenido {
   padding: 0.5em 1em 1em;
 
+}
+.fondo-proyecto {
+  background-image: url(/assets/images/fondo-proyectos.svg);
+  background-size: cover;
+}
+@media ( min-width: 750px) {
+  .mis-proyectos {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .mis-proyectos h2 {
+    flex-basis: 200px;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+}
+@media ( min-width: 950px) {
+  .cards-container {
+    flex-direction: row;
+  }
+  .mis-proyectos {
+    flex-direction: column;
+  }
+  .mis-proyectos h2 {
+    flex-basis: auto;
+    flex-shrink: 1;
+    align-self: center;
+  }
 }
 
 /* ************************* */
