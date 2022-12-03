@@ -247,7 +247,7 @@ body {
 }
 
 .container {
-  width: min(100% - 3rem, var(--container-max, 72rem));
+  width: min(100% - 3rem, var(--container-max, 62rem));
   margin-inline: auto;
 }
 
@@ -266,6 +266,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem;
+}
+
+.logo {
+  text-shadow: 0 1px 5px hsl(var(--clr-claro));
 }
 
 .nav-principal {
@@ -292,24 +296,19 @@ header {
   background-repeat: no-repeat;
 }
 
-@media ( min-width: 650px) {
-  .hero-section {
-    background-image: url(/assets/images/fondo-header-desktop.svg);
-  }
-}
-
 .hero-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(2rem, 7vw, 5rem);
   padding-block: var(--padding-block);
   text-align: center;
 }
 
 .hero-img-container {
-  width: 170px;
+  flex-basis: clamp(170px, 28vw, 250px);
   height: auto;
+  flex-shrink: 0;
   aspect-ratio: 1;
   overflow: hidden;
   border: 10px solid hsla(var(--clr-oscuro));
@@ -322,6 +321,18 @@ header {
   height: 100%;
   object-fit: cover;
 }
+
+@media ( min-width: 650px) {
+  .hero-section {
+    background-image: url(/assets/images/fondo-header-desktop.svg);
+  }
+  .hero-container {
+    flex-direction: row-reverse;
+    text-align: left;
+    padding: 6em 3em;
+  }
+}
+
 
 /* ************************* */
 /* Sobre mi y mi habilidad   */
@@ -341,6 +352,24 @@ header {
 .ul-habilidades {
   flex-direction: column;
   align-items: center;
+}
+
+@media ( min-width: 750px) {
+    .sobre-mi,
+    .mis-habilidades {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .sobre-mi h2,
+    .mis-habilidades h2 {
+      flex-basis: 200px;
+      flex-shrink: 0;
+    }
+    .ul-habilidades {
+      flex-direction: row;
+      
+    }
 }
 
 /* ************************* */
