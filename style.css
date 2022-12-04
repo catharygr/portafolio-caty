@@ -310,6 +310,10 @@ header {
   text-align: center;
 }
 
+.rotate-center {
+  animation:rotate-center 0.6s} 
+  @keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
 .hero-img-container {
   flex-basis: clamp(170px, 28vw, 250px);
   height: auto;
@@ -405,13 +409,15 @@ header {
 }
 
 .card-contenido {
-  padding: 0.5em 1em 1em;
+  padding: 1em 2em 2em;
 
 }
+
 .fondo-proyecto {
   background-image: url(/assets/images/fondo-proyectos.svg);
   background-size: cover;
 }
+
 @media ( min-width: 750px) {
   .mis-proyectos {
     flex-direction: row;
@@ -421,6 +427,10 @@ header {
     flex-basis: 200px;
     flex-shrink: 0;
     align-self: flex-start;
+  }
+  .card-contenido {
+    padding: 1em 3em 3em;
+  
   }
 }
 @media ( min-width: 950px) {
@@ -434,6 +444,10 @@ header {
     flex-basis: auto;
     flex-shrink: 1;
     align-self: center;
+  }
+  .card-contenido {
+    padding: 0.5em 1em 1em;
+  
   }
 }
 
@@ -478,6 +492,31 @@ header {
   border-radius: var(--border-radius);
   margin-block: var(--margin-texto);
   text-align: center;
+}
+
+@media ( min-width: 750px) {
+  .contact-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+   .contact-container > * {
+    flex-basis: 50%;
+   }
+  .contact-contenido  {
+    align-self: stretch;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .contact-contenido :last-child {
+    margin-top: auto;
+  }
+}
+
+@media ( min-width: 950px) {
+  .contact-container {
+    gap: 5rem;
+  }
+  
 }
 
 /* ************************* */
