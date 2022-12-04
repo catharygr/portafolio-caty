@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="/assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
+  <script defer  src="/assets/scripts/index.js"></script>
   <title>Portafolio de Cathy</title>
 </head>
 <body>
@@ -15,17 +16,17 @@
       <div>
         <p class="logo fs-600 f-str-75 f-wei-600">this.cataryGarciaRivas</p>
       </div>
-      <nav>
-        <ul class="flex nav-principal fondo-amarillo">
-          <li>Sobre mi</li>
-          <li>Proyectos</li>
-          <li>Contactos</li>
+      <nav id="main-nav" aria-label="main-nav">
+        <ul class="flex nav-principal fondo-asento-claro">
+          <li><a href="#">Sobre mi</a></li>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Contactos</a></li>
         </ul>
       </nav>
     </div>
 
     <template id="burger-template">
-      <button id="burger-btn" type="button" aria-expanded="false" aria-label="Menu" aria-controls="main-nav">
+      <button id="burger-btn" type="button" aria-expanded="false" aria-label="Menú" aria-controls="main-nav">
         <svg width="24" height="24" aria-hidden="true">
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
         </svg>
