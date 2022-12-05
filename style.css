@@ -134,6 +134,8 @@ meter {
   --margin-texto: 1em;
   --border-radius: 7px;
   --box-shadow: 0 5px 10px 0 hsl(var(--clr-oscuro) / 0.6);
+
+  font-size: 112%;
 }
 
 /* ************************* */
@@ -277,31 +279,57 @@ header {
   text-shadow: 0 1px 5px hsl(var(--clr-claro));
 }
 
-@media (min-width: 650px) {
+@media (min-width: 43rem) {
   nav {
     --nav-button-display: none;
     --nav-position: static;
   }
-  nav ul {
+
+
+  .nav-principal {
     --nav-list-layout: row;
+    --nav-list-position: static;
+    --nav-list-padding: 0;
+    --nav-list-height: auto;
+    --nav-list-width: 100%;
+    --nav-list-shadow: none;
+    --nav-list-transform: none;
+    --nav-list-visibility: visible;
   }
 }
 
-nav {
+.nav-principal {
+  box-shadow: var(--nav-list-shadow, -5px 0 11px 0 rgb(0 0 0 / 0.2));
   flex-direction: var(--nav-list-layout, column);
   flex-wrap: wrap;
-  /* align-items: flex-end; */
   gap: 1rem;
-  /* inset-block-start: 1rem; */
-  /* inset-inline-end: 0; */
-  /* width: 50%; */
-  /* height: 100vh; */
-  /* padding: 2rem; */
-  z-index: 1000;
-  /* visibility: hidden; */
+  height: var(--nav-list-height, 100vh);
+  padding: var(--nav-list-padding, 2rem);
+  position: var(--nav-list-position, fixed);
+  inset-block-start: 0; 
+  inset-inline-end: 0; 
+  width: var(--nav-list-width, min(22rem, 100vw));
+  visibility: var(--nav-list-visibility, visible);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav-principal {
+    transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55), visibility 0.3s linear;
+  }
+}
+
+
+[aria-expanded="false"] + ul {
+  transform: var(--nav-list-transform, translateX(100%));
+  visibility: var(--nav-list-visibility, hidden);
+}
+
+
+nav {
   position: var(--nav-position, fixed);
-  inset-block-start: 1rem;
-  inset-inline-end: 1rem;
+  inset-block-start: 1.6rem;
+  inset-inline-end: 1.5rem;
+  z-index: 1000;
 }
 
 .nav-principal a {
@@ -312,9 +340,10 @@ nav {
 
 
 /* Reset button styling */
-button {
-  /* all: unset; */
+.btn-nav {
   display: var(--nav-button-display, flex);
+  position: relative;
+  z-index: 1;
 }
 
 /* ************************* */
@@ -338,7 +367,8 @@ button {
 
 .rotate-center {
   animation:rotate-center 0.6s} 
-  @keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+  @keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}
+}
 
 .hero-img-container {
   flex-basis: clamp(170px, 28vw, 250px);
@@ -357,7 +387,7 @@ button {
   object-fit: cover;
 }
 
-@media ( min-width: 650px) {
+@media ( min-width: 40.6rem) {
   .hero-section {
     background-image: url(/assets/images/fondo-header-desktop.svg);
   }
@@ -389,7 +419,7 @@ button {
   align-items: center;
 }
 
-@media ( min-width: 750px) {
+@media ( min-width: 47rem) {
     .sobre-mi,
     .mis-habilidades {
       flex-direction: row;
@@ -444,7 +474,7 @@ button {
   background-size: cover;
 }
 
-@media ( min-width: 750px) {
+@media ( min-width: 47rem) {
   .mis-proyectos {
     flex-direction: row;
     justify-content: flex-start;
@@ -459,7 +489,7 @@ button {
   
   }
 }
-@media ( min-width: 950px) {
+@media ( min-width: 60rem) {
   .cards-container {
     flex-direction: row;
   }
@@ -520,7 +550,7 @@ button {
   text-align: center;
 }
 
-@media ( min-width: 750px) {
+@media ( min-width: 47rem) {
   .contact-container {
     flex-direction: row;
     gap: 2rem;
@@ -538,7 +568,7 @@ button {
   }
 }
 
-@media ( min-width: 950px) {
+@media ( min-width: 60rem) {
   .contact-container {
     gap: 5rem;
   }
