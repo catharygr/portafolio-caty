@@ -249,6 +249,10 @@ body {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .flow > *:not(:last-child){
   margin-bottom: var(--margin-texto)
 }
@@ -585,3 +589,77 @@ footer {
   padding-block: var(--padding-block);
 
 }
+
+/* ************************* */
+/*    Página de Proyecto     */
+/* ************************* */
+
+.proyecto-hero {
+  background-image: url(/assets/images/fondo-header-movil.svg);
+  background-size: cover;
+}
+
+.proyecto-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2rem, 7vw, 5rem);
+  padding-block: var(--padding-block);
+  text-align: center;
+}
+
+/* ************************* */
+/*  Introducción  Proyecto   */
+/* ************************* */
+
+.introduccion {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-block: var(--padding-block);
+}
+
+/* ************************* */
+/*  Detalles del proyecto    */
+/* ************************* */
+
+.proyecto-detalles {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding-block: var(--padding-block);
+}
+
+/* ************************* */
+/*  Descripción detallada   */
+/* ************************* */
+
+.fondo-descripcion {
+  background-image: url(/assets/images/fondo-proyectos.svg);
+  background-size: cover;
+}
+
+.descripcion-proyecto {
+  gap: 1rem;
+  padding-block: var(--padding-block);
+}
+
+.descripcion-proyecto h3 {
+  text-align: center;
+}
+
+/* ************************* */
+/*  Problemas y soluciones   */
+/* ************************* */
+
+.problema-soluciones {
+  gap: 1rem;
+  padding-block: var(--padding-block);
+}
+
+.problema-soluciones h3 {
+  text-align: center;
+}
+
