@@ -583,12 +583,18 @@ nav {
 /*      Footer               */
 /* ************************* */
 
-footer {
+.footer-proyecto {
   text-align: center;
   letter-spacing: 2px;
   padding-block: var(--padding-block);
-
 }
+
+/* @media (min-width: 47rem) {
+  .footer-proyecto {
+    font-size: var(--fs-700);
+
+  }
+} */
 
 /* ************************* */
 /*    Página de Proyecto     */
@@ -620,6 +626,19 @@ footer {
   padding-block: var(--padding-block);
 }
 
+@media ( min-width: 47rem) {
+  .introduccion {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+ .introduccion h2 {
+    flex-basis: 200px;
+    flex-shrink: 0;
+  }
+  .introduccion h2 {
+    align-self: flex-start;
+  }
+}
 /* ************************* */
 /*  Detalles del proyecto    */
 /* ************************* */
@@ -632,8 +651,16 @@ footer {
   padding-block: var(--padding-block);
 }
 
+@media (min-width: 47rem) {
+  .proyecto-detalles {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
 /* ************************* */
-/*  Descripción detallada   */
+/* Descripción detallada y   */ 
 /* ************************* */
 
 .fondo-descripcion {
@@ -641,25 +668,65 @@ footer {
   background-size: cover;
 }
 
-.descripcion-proyecto {
+.descripcion-proyecto,
+.problema-soluciones, 
+.otros-proyectos {
   gap: 1rem;
   padding-block: var(--padding-block);
 }
 
-.descripcion-proyecto h3 {
+.descripcion-proyecto h3,
+.problema-soluciones h3
+ {
+  text-align: center;
+}
+/* @media ( min-width: 43rem) {
+  .grid-elem-3 {
+    box-shadow: var(--box-shadow);
+  }
+} */
+
+@media (min-width: 47rem) {
+  .descripcion-proyecto {
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    gap: 3rem;
+  }
+  .descripcion-proyecto h3 {
+    text-align: left;
+  }
+ 
+}
+
+@media (min-width: 47rem) {
+  .problema-soluciones {
+    grid-template-columns: 1fr repeat(2, 1fr);
+    grid-template-rows: 200px 1fr 200px;
+  }
+
+}
+
+/* ************************************/
+/*  Otros proyectos y contactar       */
+/* ********************************** */
+
+.otros-proyectos h2 {
   text-align: center;
 }
 
-/* ************************* */
-/*  Problemas y soluciones   */
-/* ************************* */
-
-.problema-soluciones {
+.contactar {
   gap: 1rem;
   padding-block: var(--padding-block);
-}
-
-.problema-soluciones h3 {
   text-align: center;
 }
 
+.contacta-btn {
+  padding: 0.4rem 1rem;
+}
+
+@media ( min-width: 47rem) {
+  .contactar {
+    flex-direction: row;
+  }
+ 
+}
