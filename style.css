@@ -739,6 +739,11 @@ footer {
 /*  Problemas y soluciones            */
 /* ********************************** */
 
+.grid-problemas-2 {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
 @media (min-width: 57rem) {
   .problema-soluciones {
     grid-template-columns: 2fr 1fr 2fr;
@@ -754,6 +759,7 @@ footer {
   .grid-problemas-2 {
     grid-row: 1 / 4;
     grid-column: 2 / 3;
+   
   }
   .grid-problemas-3 {
     grid-row: 2 / 3;
