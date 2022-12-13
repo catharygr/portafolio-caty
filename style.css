@@ -520,6 +520,10 @@ nav {
   .cards-container {
     flex-direction: row;
   }
+  .cards-container > * {
+    flex-grow: 1;
+    flex-basis: 15rem;
+  }
   .mis-proyectos {
     flex-direction: column;
   }
