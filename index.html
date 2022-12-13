@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="/assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
-  <script defer  src="/assets/scripts/index.js"></script>
+  <script defer src="/assets/scripts/index.js"></script>
   <title>Portafolio de Cathy</title>
 </head>
+
 <body>
-<!-- Header y Menú -->
+  <!-- Header y Menú -->
   <header class="fondo-asento-claro color-oscuro">
     <div class="container flex header-container">
       <div>
@@ -26,7 +28,8 @@
     </div>
 
     <template id="burger-template">
-      <button class="btn-nav" id="burger-btn" type="button" aria-expanded="false" aria-label="Menú" aria-controls="main-nav">
+      <button class="btn-nav" id="burger-btn" type="button" aria-expanded="false" aria-label="Menú"
+        aria-controls="main-nav">
         <svg width="24" height="24" aria-hidden="true">
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
         </svg>
@@ -36,13 +39,14 @@
   </header>
 
 
-<!-- Hero -->
+  <!-- Hero -->
   <section class="hero-section">
     <div class="hero-container container flex">
       <div class="hero-img-container fondo-asento-claro rotate-center">
-        <img  src="assets/images/caty.png" alt="Foto de mi">
+        <img src="/assets/images/caty.png" alt="Foto de mi">
       </div>
-      <h1 class="fs-hero f-str-75 f-wei-600 lh-small color-oscuro">Hola soy Catary, desarrolladora FrontEnd y algo más...</h1>
+      <h1 class="fs-hero f-str-75 f-wei-600 lh-small color-oscuro">Hola soy Catary, desarrolladora FrontEnd y algo
+        más...</h1>
     </div>
   </section>
 
@@ -65,24 +69,22 @@
     </div>
   </section>
 
-<!-- Mis habilidades -->
+  <!-- Mis habilidades -->
   <main>
     <section class="fondo-asento">
       <div class="container mis-habilidades flex color-oscuro">
         <h2 class="fs-800 f-str-75 f-wei-600 lh-small">Mis habilidades</h2>
 
-          <ul class="ul-habilidades flex fs-500 f-wei-600">
-            <li>Javascript ES6</li>
-            <li>React</li>
-            <li>Git & GitHub</li>
-            <li>Css & HTML</li>
-            <li>@11ty</li>
-            <li>Nectifly</li>
-          </ul>
+        <ul class="ul-habilidades flex fs-500 f-wei-600">
+          <li>Javascript ES6</li>
+          <li>React</li>
+          <li>Git & GitHub</li>
+          <li>Css & HTML</li>
+        </ul>
 
       </div>
     </section>
-<!-- Mis proyectos -->
+    <!-- Mis proyectos -->
     <section id="mis-proyectos" class="fondo-proyecto">
       <div class="container mis-proyectos flex color-oscuro">
         <h2 class="fs-800 f-str-75 f-wei-600">
@@ -103,7 +105,8 @@
             <img src="/assets/images/proyecto-1/blancodent-card.jpg" alt="">
             <div class="card-contenido flow">
               <h3 class="fs-600 f-str-75 f-wei-600">Clínica dental Blancodent</h3>
-              <p>Web site of Dental Clinic built with CSS, HTML and a splash of JS using @11ty statis site generator and nunjucs template language</p>
+              <p>Web site of Dental Clinic built with CSS, HTML and a splash of JS using @11ty statis site generator and
+                nunjucs template language</p>
               <p><a href="#">Check the proyect detail page</a></p>
             </div>
           </div>
@@ -111,7 +114,8 @@
             <img src="/assets/images/proyecto-1/blancodent-card.jpg" alt="">
             <div class="card-contenido flow">
               <h3 class="fs-600 f-str-75 f-wei-600">Clínica dental Blancodent</h3>
-              <p>Web site of Dental Clinic built with CSS, HTML and a splash of JS using @11ty statis site generator and nunjucs template language</p>
+              <p>Web site of Dental Clinic built with CSS, HTML and a splash of JS using @11ty statis site generator and
+                nunjucs template language</p>
               <p><a href="#">Check the proyect detail page</a></p>
             </div>
           </div>
@@ -119,7 +123,7 @@
         </div>
       </div>
     </section>
-<!-- Formulario -->
+    <!-- Formulario -->
     <section id="form" class="fondo-asento">
       <div class="container flex contact-container">
         <div class="flex contact-contenido color-blanco">
@@ -128,25 +132,27 @@
             Si estás buscando a un desarrollador frontend junior con quién te gustaria trabajar o simplemente deseas conectarte/hacer una pregunta, no dudes en escribirme.</p>
           <p class="f-wei-600 color-oscuro">github | mastadon | twitter | linkedin </p>
         </div>
-  
+
         <div>
           <form class="contact-form fondo-oscuro color-claro flow" name="contacto" method="POST" data-netlify="true">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te gustaria que te llamara?">
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Introduce tu dirección de correo">
+            <input type="text" id="email" name="email" placeholder="¿Cual es tu dirección de correo?">
             <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="6" placeholder="Escribe aquí tu mensaje"></textarea>
-            <button class="btn fondo-asento-claro color-oscuro fs-500 f-wei-600">Muchas gracias</button>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="6"
+              placeholder="Escribe aquí tu mensaje..."></textarea>
+            <button type="submit" class="btn fondo-asento-claro color-oscuro fs-500 f-wei-600">Muchas gracias</button>
           </form>
         </div>
-<!-- Footer -->
       </div>
     </section>
+    <!-- Footer -->
     <footer>
-        <p class="color-oscuro fs-300 f-wei-600">Hecho en canarias con amor</p>
+      <p class="color-oscuro fs-300 f-wei-600">Hecho en canarias con amor</p>
     </footer>
   </main>
-  
+
 </body>
+
 </html>
