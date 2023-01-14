@@ -5,17 +5,23 @@ const button = burgerClone.querySelector('button');
 
 // Toggle aria-expanded attribute
 button.addEventListener('click', e => {
-  // aria-expanded="true" signals that the menu is currently open
+  // aria-expanded="true" Indica que el menú está abierto actualmente
   const isOpen = button.getAttribute('aria-expanded') === "true"
   button.setAttribute('aria-expanded', !isOpen);
 });
 
-// Hide list on keydown Escape
+//Ocultar la lista al presionar escape
 nav.addEventListener('keyup', e => {
   if (e.code === 'Escape') {
     button.setAttribute('aria-expanded', false);
   }
 });
 
-// Add the button to the page
+// Agregar el botón a la página
 nav.insertBefore(burgerClone, list);
+
+
+// Función para cerrar el menú para que se cierre si el enlace es un almohadilla
+function cerrarMenu() {
+  button.setAttribute('aria-expanded', 'false');
+}
