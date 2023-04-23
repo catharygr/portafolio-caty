@@ -103,10 +103,10 @@ meter {
 
 :root {
   /* Colores */
-  --clr-oscuro: 127 9% 41%;
-  --clr-asento: 10 50% 79%;
-  --clr-asento-claro: 31 61% 89%;
-  --clr-claro: 50 37% 97%;
+  --clr-oscuro: 325 95% 56%;
+  --clr-asento: 50 94% 51%;
+  --clr-asento-claro: 174 89% 56%;
+  --clr-claro: 357 91% 52%
   --clr-negro: 0 0% 20%;
   --clr-blanco: 0 0% 100%;
 
@@ -369,7 +369,8 @@ nav {
 /* ************************* */
 
 .hero-section {
-  background-image: url(/assets/images/fondo-header-movil.svg);
+  /* background-image: url(/assets/images/fondo-header-movil.svg); */
+
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -414,7 +415,7 @@ nav {
 
 @media (min-width: 43rem) {
   .hero-section {
-    background-image: url(/assets/images/fondo-header-desktop.svg);
+    /* background-image: url(/assets/images/fondo-header-desktop.svg); */
   }
   .hero-container {
     flex-direction: row-reverse;
@@ -498,7 +499,7 @@ nav {
 }
 
 .fondo-proyecto {
-  background-image: url(/assets/images/fondo-proyectos.svg);
+  /* background-image: url(/assets/images/fondo-proyectos.svg); */
   background-size: cover;
 }
 
@@ -555,7 +556,7 @@ nav {
 }
 
 .contact-form :where(input, textarea) {
-  background-color: hsl(var(--clr-claro));
+  background-color: hsl(var(--clr-blanco));
   width: 100%;
   padding: 0.5em;
   border-radius: var(--border-radius);
@@ -563,7 +564,7 @@ nav {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: hsl(var(--clr-oscuro) / 0.6);
+  color: hsl(var(--clr-negro));
   font-size: var(--fs-300);
 }
 
@@ -835,6 +836,5 @@ footer {
   }
   .container-otros > * {
     flex-basis: 50%;
-
   }
 }
