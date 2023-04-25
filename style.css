@@ -106,7 +106,6 @@ meter {
   --clr-oscuro: 325 95% 56%;
   --clr-asento: 50 94% 51%;
   --clr-asento-claro: 174 89% 56%;
-  /* --clr-claro: 349 100% 84%; */
   --clr-negro: 0 0% 20%;
   --clr-blanco: 0 0% 100%;
 
@@ -169,6 +168,9 @@ body {
 .fondo-claro {
   background-color: hsl(var(--clr-claro));
 }
+.fondo-negro {
+  background-color: hsl(var(--clr-negro));
+}
 /* De letras */
 .color-negro {
   color: hsl(var(--clr-negro));
@@ -184,9 +186,6 @@ body {
 }
 .color-asento-claro {
   color: hsl(var(--clr-aento-claro));
-}
-.color-claro {
-  color: hsl(var(--clr-claro));
 }
 
 /* Formatos de letras */
@@ -274,6 +273,12 @@ h3 {
 img {
   display: block;
   /* object-fit: cover; */
+}
+
+.img-container {
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  overflow: hidden;
 }
 
 a {
@@ -372,7 +377,7 @@ nav {
 
 .hero-section {
   background-image: url(/assets/images/fondo-header-desktop.svg);
-
+  /* background-color: hsl(var(--clr-negro)); */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -416,9 +421,6 @@ nav {
 }
 
 @media (min-width: 43rem) {
-  .hero-section {
-    background-image: url(/assets/images/fondo-header-desktop.svg);
-  }
   .hero-container {
     flex-direction: row-reverse;
     text-align: left;
@@ -579,7 +581,13 @@ nav {
   width: 100%;
   border-radius: var(--border-radius);
   margin-block: var(--margin-texto);
+  transition: transform 0.3s ease-in-out;
   text-align: center;
+}
+
+.btn:hover {
+  transform: scale(102%);
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (min-width: 47rem) {

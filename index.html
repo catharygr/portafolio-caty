@@ -1,154 +1,247 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="/assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/assets/scripts/index.js"></script>
+    <title>Portafolio de Cathy</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="/assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/style.css">
-  <script defer src="/assets/scripts/index.js"></script>
-  <title>Portafolio de Cathy</title>
-</head>
-
-<body>
-  <!-- Header y Menú -->
-  <header class="fondo-asento-claro color-oscuro">
-    <div class="container flex header-container">
-      <div>
-        <p class="logo fs-600 f-str-75 f-wei-600">{this.cataryGarciaRivas}</p>
-      </div>
-      <nav id="main-nav" aria-label="main-nav">
-        <ul class="flex nav-principal fondo-asento-claro f-wei-600" role="list">
-          <li><a onclick="cerrarMenu()" href="#sobre-mi">Sobre mi</a></li>
-          <li><a onclick="cerrarMenu()" href="#mis-proyectos">Proyectos</a></li>
-          <li><a onclick="cerrarMenu()" href="#form">Contactos</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <template id="burger-template">
-      <button class="btn-nav" id="burger-btn" type="button" aria-expanded="false" aria-label="Menú"
-        aria-controls="main-nav">
-        <svg width="24" height="24" aria-hidden="true">
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
-        </svg>
-      </button>
-    </template>
-
-  </header>
-
-
-  <!-- Hero -->
-  <section class="hero-section">
-    <div class="hero-container container flex">
-      <div class="hero-img-container fondo-asento-claro rotate-center">
-        <img src="/assets/images/caty-emoji.jpg" alt="Foto de mi">
-      </div>
-      <h1 class="fs-hero f-str-75 f-wei-600 lh-small color-oscuro">Cathy, desarrolladora FrontEnd y algo
-        más...</h1>
-    </div>
-  </section>
-
-
-  <!-- Sobre mi -->
-  <section id="sobre-mi" class="fondo-oscuro color-blanco">
-    <div class="container sobre-mi flex">
-      <h2 class="fs-800 f-str-75 f-wei-600">Sobre mi</h2>
-      <div class="flow">
-        
-        <p class="f-wei-650">
-          ¡Hola! Iniciada en el mundo de la programación como junior, con muchas ganas de llevar a cabo todo lo aprendido en diferentes cursos, como en <a href="https://freecodecamp.org">FreeCodeCamp</a>, <a href="https://platzi.com">Platzi</a> y <a href="https://scrimba.com">Scrimba</a> de CSS, HTML, JavaScript, React 18 y React Router 6. Con mucha disposición, determinación, voluntad y sin miedo a nada. Espero a que os animéis a contactarme. Gracias de antemano.
-        </p>  
-      </div>
-    </div>
-  </section>
-
-  <!-- Mis habilidades -->
-  <main>
-    <section class="fondo-asento">
-      <div class="container mis-habilidades flex color-negro">
-        <h2 class="fs-800 f-str-75 f-wei-600 lh-small">Mis habilidades</h2>
-
-        <ul class="ul-habilidades flex fs-500 f-wei-600">
-          <li>JavaScript ES6</li>
-          <li>React 18</li>
-          <li>React Router 6</li>
-          <li>Git & GitHub</li>
-          <li>CSS & HTML</li>
-        </ul>
-
-      </div>
-    </section>
-    <!-- Mis proyectos -->
-    <section id="mis-proyectos" class="fondo-proyecto">
-      <div class="container mis-proyectos flex color-oscuro">
-        <h2 class="fs-800 f-str-75 f-wei-600">
-          Mis proyectos
-        </h2>
-
-        <div class="cards-container flex">
-
-          <div class="card-proyecto flow fondo-asento-claro color-negro">
-            <img src="/assets/images/proyecto-1/blancodent-card.jpg" alt="Presentación de la página web">
-            <div class="card-contenido flow">
-              <h3 class="fs-600 f-str-75 f-wei-600">Clínica dental Blancodent</h3>
-              <p>La página web de una clínica dental (cliente comercial) hecha con CSS, HTML y un poco de JS. La web original estaba en Squarespace y la he transferido a Netlify respectando el diseño original.</p>
-              <p><a href="/proyecto-blancodent.html">Ver la descripción detallada del proyecto y mi trabajo =></a></p>
-            </div>
-          </div>
-          <div class="card-proyecto flow fondo-asento-claro color-negro">
-            <img src="/assets/images/proyecto-2/pac-man.png" alt="Presentación de la página web">
-            <div class="card-contenido flow">
-              <h3 class="fs-600 f-str-75 f-wei-600">Juego de Pac-Man</h3>
-              <p>Proyecto de JavaScript inspirado por el famoso juego de Pac-Man.</p>
-              <p>Necesitarás el teclado por lo que deberías hacerlo desde un ordenador.</p>
-              <p><a target="_blank" href="https://catharygr.github.io/juego-de-pacman/">Ve a la página web y juega una partida =></a></p>
-            </div>
-          </div>
-          <div class="card-proyecto flow fondo-asento-claro color-negro">
-            <img src="/assets/images/proyecto-3/snake-game.png" alt="Presentación de la página web">
-            <div class="card-contenido flow">
-              <h3 class="fs-600 f-str-75 f-wei-600">Juego de la serpiente</h3>
-              <p>Uno de mis primeros proyectos en JavaScript, aprendiendo a manipular DOM, insertando CSS desde JS, usando modus operator, etc... </p>
-              <p>Necesitarás el teclado por lo que deberías hacerlo desde un ordenador.</p>
-              <p><a target="_blank" href="https://catharygr.github.io/juego-snake-game/">Te invito a jugar ;-) =></a></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- Formulario -->
-    <section id="form" class="fondo-asento">
-      <div class="container flex contact-container">
-        <div class="flex contact-contenido color-negro">
-          <h2 class="fs-800 f-str-75 f-wei-600 lh-small">Vamos a ver sí juntos podemos hacer que funcione...</h2>
-          <p>
-            Si estás buscando a un desarrollador frontend junior con quién te gustaria trabajar o simplemente deseas conectarte/hacer una pregunta, no dudes en escribirme.</p>
-        </div>
-
+  <body>
+    <!-- Header y Menú -->
+    <header class="fondo-asento-claro color-oscuro">
+      <div class="container flex header-container">
         <div>
-          <form class="contact-form fondo-oscuro color-claro flow" name="contacto" method="POST" data-netlify="true">
-            <label for="nombre">Nombre:</label>
-            <input  type="text" id="nombre" name="nombre" placeholder="¿Cómo te gustaria que te llamara?">
-            <label for="email">Email:</label>
-            <input  type="text" id="email" name="email" placeholder="¿Cuál es tu dirección de correo?">
-            <label for="mensaje">Mensaje:</label>
-            <textarea  name="mensaje" id="mensaje" cols="30" rows="6"
-              placeholder="Escribe aquí tu mensaje..."></textarea>
-            <button type="submit" class="btn fondo-asento-claro color-oscuro fs-500 f-wei-600">Muchas gracias</button>
-          </form>
+          <p class="logo fs-600 f-str-75 f-wei-600">{this.cataryGarciaRivas}</p>
+        </div>
+        <nav id="main-nav" aria-label="main-nav">
+          <ul
+            class="flex nav-principal fondo-asento-claro f-wei-600"
+            role="list"
+          >
+            <li><a onclick="cerrarMenu()" href="#sobre-mi">Sobre mi</a></li>
+            <li>
+              <a onclick="cerrarMenu()" href="#mis-proyectos">Proyectos</a>
+            </li>
+            <li><a onclick="cerrarMenu()" href="#form">Contactos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <template id="burger-template">
+        <button
+          class="btn-nav"
+          id="burger-btn"
+          type="button"
+          aria-expanded="false"
+          aria-label="Menú"
+          aria-controls="main-nav"
+        >
+          <svg width="24" height="24" aria-hidden="true">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </button>
+      </template>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-container container flex">
+        <div class="hero-img-container fondo-asento-claro rotate-center">
+          <img src="/assets/images/caty-emoji.jpg" alt="Foto de mi" />
+        </div>
+        <h1 class="fs-hero f-str-75 f-wei-600 lh-small color-oscuro">
+          Cathy, desarrolladora FrontEnd y algo más...
+        </h1>
+      </div>
+    </section>
+
+    <!-- Sobre mi -->
+    <section id="sobre-mi" class="fondo-oscuro color-blanco">
+      <div class="container sobre-mi flex">
+        <h2 class="fs-800 f-str-75 f-wei-600">Sobre mi</h2>
+        <div class="flow">
+          <p class="f-wei-650">
+            ¡Hola! Iniciada en el mundo de la programación como junior, con
+            muchas ganas de llevar a cabo todo lo aprendido en diferentes
+            cursos, como en <a href="https://freecodecamp.org">FreeCodeCamp</a>,
+            <a href="https://platzi.com">Platzi</a> y
+            <a href="https://scrimba.com">Scrimba</a> de CSS, HTML, JavaScript,
+            React 18 y React Router 6. Con mucha disposición, determinación,
+            voluntad y sin miedo a nada. Espero a que os animéis a contactarme.
+            Gracias de antemano.
+          </p>
         </div>
       </div>
     </section>
-    <!-- Footer -->
-    <footer class="fondo-asento-claro">
-      <p class="color-oscuro fs-300 f-wei-600">Hecho en canarias con amor</p>
-      <p class="f-wei-600 color-oscuro"><a target="_blank" href="https://github.com/catharygr">github</a> | linkedln </p>
-    </footer>
-  </main>
 
-</body>
+    <!-- Mis habilidades -->
+    <main>
+      <section class="fondo-asento">
+        <div class="container mis-habilidades flex color-negro">
+          <h2 class="fs-800 f-str-75 f-wei-600 lh-small">Mis habilidades</h2>
 
+          <ul class="ul-habilidades flex fs-400 f-wei-600">
+            <li>JavaScript ES6</li>
+            <li>React 18</li>
+            <li>React Router 6</li>
+            <li>Git & GitHub</li>
+            <li>CSS & HTML</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+      </section>
+      <!-- Mis proyectos -->
+      <section id="mis-proyectos" class="fondo-proyecto">
+        <div class="container mis-proyectos flex color-oscuro">
+          <h2 class="fs-800 f-str-75 f-wei-600">Mis proyectos</h2>
+
+          <div class="cards-container flex">
+            <div class="card-proyecto flow fondo-asento-claro color-negro">
+              <div class="img-container">
+                <img
+                  src="/assets/images/sarajevo-tours/sarajevo-tours-card.png"
+                  alt="Presentación de la página web"
+                />
+              </div>
+              <div class="card-contenido flow">
+                <h3 class="fs-600 f-str-75 f-wei-600">Sarajevo tours</h3>
+                <p>
+                  Mi primer proyecto hecho con React, práctica react-18,
+                  react-router 6, firebase auth, firestore como backend, los
+                  hook más usados
+                </p>
+                <p>Vea la descripción detallada del proyecto y mi trabajo =></p>
+                <p>
+                  <a href="/sarajevo-tours.html">Te invito a visitarla =></a>
+                </p>
+              </div>
+            </div>
+
+            <div class="card-proyecto flow fondo-asento-claro color-negro">
+              <div class="img-container">
+                <img
+                  src="/assets/images/blancodent/blancodent-card.jpg"
+                  alt="Presentación de la página web"
+                />
+              </div>
+              <div class="card-contenido flow">
+                <h3 class="fs-600 f-str-75 f-wei-600">
+                  Clínica dental Blancodent
+                </h3>
+                <p>
+                  La página web de una clínica dental (cliente comercial) hecha
+                  con CSS, HTML y un poco de JS. La web original estaba en
+                  Squarespace y la he transferido a Netlify respectando el
+                  diseño original.
+                </p>
+                <p>
+                  <a href="/proyecto-blancodent.html"
+                    >Vea la descripción detallada del proyecto y mi trabajo
+                    =></a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card-proyecto flow fondo-asento-claro color-negro">
+              <div class="img-container">
+                <img
+                  src="/assets/images/proyecto-2/pac-man.png"
+                  alt="Presentación de la página web"
+                />
+              </div>
+              <div class="card-contenido flow">
+                <h3 class="fs-600 f-str-75 f-wei-600">Juego de Pac-Man</h3>
+                <p>
+                  Proyecto de JavaScript inspirado por el famoso juego de
+                  Pac-Man.
+                </p>
+                <p>
+                  Necesitarás el teclado por lo que deberías hacerlo desde un
+                  ordenador.
+                </p>
+                <p>
+                  <a
+                    target="_blank"
+                    href="https://catharygr.github.io/juego-de-pacman/"
+                    >Ve a la página web y juega una partida =></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Formulario -->
+      <section id="form" class="fondo-asento">
+        <div class="container flex contact-container">
+          <div class="flex contact-contenido color-negro">
+            <h2 class="fs-800 f-str-75 f-wei-600 lh-small">
+              Vamos a ver sí juntos podemos hacer que funcione...
+            </h2>
+            <p>
+              Si estás buscando a un desarrollador frontend junior con quién te
+              gustaria trabajar o simplemente deseas conectarte/hacer una
+              pregunta, no dudes en escribirme.
+            </p>
+          </div>
+
+          <div>
+            <form
+              class="contact-form fondo-oscuro color-claro flow"
+              name="contacto"
+              method="POST"
+              data-netlify="true"
+            >
+              <label for="nombre">Nombre:</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="¿Cómo te gustaria que te llamara?"
+              />
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="¿Cuál es tu dirección de correo?"
+              />
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                name="mensaje"
+                id="mensaje"
+                cols="30"
+                rows="6"
+                placeholder="Escribe aquí tu mensaje..."
+              ></textarea>
+              <button
+                type="submit"
+                class="btn fondo-asento-claro color-oscuro fs-500 f-wei-600"
+              >
+                Muchas gracias
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="fondo-asento-claro">
+        <p class="color-oscuro fs-300 f-wei-600">Hecho en canarias con amor</p>
+        <p class="f-wei-600 color-oscuro">
+          <a target="_blank" href="https://github.com/catharygr">github</a> |
+          linkedIn
+        </p>
+      </footer>
+    </main>
+  </body>
 </html>
