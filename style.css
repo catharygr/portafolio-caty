@@ -277,11 +277,13 @@ img {
 }
 
 a {
-  padding-bottom: 3px;
-  border-bottom: 2px solid hsl(var(--clr-oscuro));
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
 a:where(:hover, :focus) {
-  border-bottom-color: red;
+  border-bottom-color: hsl(var(--clr-oscuro));
+  text-decoration-thickness: 4px;
 }
 
 /* ************************* */
