@@ -64,7 +64,8 @@
             Proyecto Sarajevo Tours, página web muy devertida de una imaginaria
             aplicación sobre una tienda online de venta de guias a turistas. He
             aprendido mucho como primer proyecto utilizando react, react router,
-            firebase backend, componentes controlados y carro de compra.
+            firebase auth, firestore database como backend, componentes
+            controlados y carro de compra.
           </p>
         </div>
       </div>
@@ -111,22 +112,22 @@
         <div class="container grid descripcion-proyecto">
           <div class="grid-elem-1 flow">
             <h3 class="fs-700 f-str-75 f-wei-600">Propósito del proyecto</h3>
-            <p>El proyecto se ha dividido en tres fases:</p>
+            <p>Primer proyecto propio hecho con React:</p>
             <p>
-              En la primera (terminada), simplemente se ha copiado el diseño
-              existente en Squarespace pasándolo al Netlify y haciendo un código
-              base nuevo. En el proceso únicamente se ha añadido un nuevo
-              segmento hero con varias ofertas.
+              Cuando terminamos el curso de react y react router para repasar lo
+              aprendido nos inspiramos en un viaje que hicimos a Sarajevo, con
+              este proyecto nuestro próposito ha sido usar las rutas nidadas que
+              permitiera una navegación dinámica y aprender en mi caso, algo de
+              backend que con firebase he adquirido conocimientos.
             </p>
             <p>
-              En la segunda parte (actualmente trabajando en este) se pasará el
-              código base a Eleventy (generador de páginas estáticas), la cual
-              ayudará con la reorganización de la web e implementación de un
-              CMS.
+              Preparado en Figma para que todo fuera mas fluido por mi pareja
+              que tiene experiencia en esta app y beneficiándonos del trabajo en
+              equipo.
             </p>
             <p>
-              En la tercera (por hacer), se creará un carrito de compra y se
-              conectará con la pasarela de pago Stripe.
+              Como es una página ficticia hemos decidido hacer el carrito sin la
+              pasarela de pago que redirecciona a la página proyecto.
             </p>
           </div>
 
@@ -134,19 +135,22 @@
             <h3 class="fs-700 f-str-75 f-wei-600">Mi papel en el proyecto</h3>
             <p>En el proyecto trabajamos dos.</p>
             <p>
-              Mi papel en este proyecto ha sido encargarme de analizar el diseño
-              actual y transferirlo al nuevo código utilizando las últimas
-              tecnologías de CSS.
+              Mi papel en este proyecto ha sido entender cada paso que dábamos y
+              aplicando todo los conocimentos aprendido
             </p>
             <p>
-              Posteriormente, revisar y depurar todo el código para eliminar
-              errores. Con esto hemos conseguido que la web mejore de una manera
-              completa y eficiente.
+              Leyendo la documentación de React y React router he podido ayudar
+              en cada paso que hemos dado, intentando hacer el código sin tener
+              que copirarlo de nadie, entendiendo paso a paso todo lo aprendido.
+              Para mi ha sido una buena experiencia ya que a no tener ningun
+              conociemientos sobre esta materia tuve que esforzarme mucho y
+              quemar muchas horas para que todo me quedara claro y entender cada
+              código y decisión que íbamos tomando.
             </p>
             <p>
-              Colaborar con mi compañero del proyecto para elaborar diseño y la
-              estructura para hacer que la página sea accesible y rápida ante
-              todo.
+              He sido de mucha ayuda y estoy contenta con el trabajo que he
+              hecho y con los errores que he cometido como principiante. Una
+              buena experincia en este mundo de la codificación.
             </p>
           </div>
 
@@ -179,12 +183,6 @@
               A base del diseño que he recibido, he decidido usar las siguientes
               herramientas para los componentes que contienen layout:
             </p>
-
-            <p>
-              HTML: El uso de las etiquetas semánticas como section, main,
-              article, nav... con la intención de hacer la página accesible
-              desde las primeras líneas del nuevo código.
-            </p>
             <p>
               CSS: He ustilizado display grid y flex, para algunos componentes,
               he usado container-query que permite aplicar estilos a un elemento
@@ -193,20 +191,31 @@
               personalizadas de titulos y párrafos.
             </p>
             <p>
-              Uso de las propiedades modernas como backdrop-filter,
-              margin-inline, aspect-ratio…
+              React: Componentes, props, formularios con estado, useEffect,
+              useStates, createContext, useRef, createContext. Con el uso de los
+              componentes separamos el interfaz de usuario, reutilizándolos
+              pasandoles props. El formulario como un componente controlado.
+              Usos de los hook ms usados en react para una mejor renderización
+              de la web.
             </p>
             <p>
-              JS: Implementación de la navegación tipo hamburger en pantallas
-              pequeñas vía aria-hidden: y aria-selected: atributos para que sea
-              accesible vía teclado. También implementación de un carrusel en la
-              sección de hero con promociones.
+              React router: Usando rutas nidadas, rutas relativas, Outles, Link,
+              NavLink, parámetros de búsquedas, useLocation, redering
+              condicional, useNavigate
+            </p>
+            <p>
+              Firebase Iniciación de la app, colección, getFirestore, getDocs.
+              Autentificar, onAuthStateChanged, signInWithEmailAndPassword
+              etc...
             </p>
             <p>
               Git y GitHub: Uso continuo de git con varias ramas main/desarrollo
               y con pull request via GitHub.
             </p>
-            <p>Netlify: Conexión y deploy vía GitHub.</p>
+            <p>
+              Netlify: Envio de formulario, redirección por el pushstate en
+              react, GitHub desplegado
+            </p>
           </div>
 
           <div class="grid-elem-5">
@@ -219,25 +228,27 @@
       </section>
 
       <!-- Problemas y soluciones -->
-      <section>
+      <section class="proyecto-hero">
         <div class="container grid flow problema-soluciones">
           <div class="flow grid-problemas-1">
             <h3 class="fs-700 f-str-75 f-wei-600">Problemas y soluciones</h3>
             <p>
-              Inicialmente se trataba de una web estática pero el cliente cambió
-              de idea y también ha querido implementar un blog. Eso nos ha
-              llevado a decisiones de implementar la segunda fase (actual) de
-              utilizar Eleventy SSG que es ideal para un blog no muy complejo.
+              Poblemas surgieron muchos y soluciones más, a veces sin tener idea
+              de como resolverlo leyendo la documentacion y mirando en google
+              llegaba a la respuesta, fue un reto muy fuerte que cada dia me
+              sorprendia el avance y los conociemtos que iba alcanzando y los
+              deseo de terminar para ver como quedaba.
             </p>
 
             <p>
-              También utilizaremos un plug-in para las imágenes que automatizará
-              la entrega de la imágenes en diferentes tamaños y formatos.
+              Hemos tenido que volver a regresar mas de una vez al commit
+              anterior y empezar de nuevo porque la solución que habiamos tomado
+              no era la correcta pero siempre llegabámos a una solución con
+              éxito.
             </p>
             <p>
-              En la conversación con agente de SEO se han encontrado unos puntos
-              que serán corregidos para mejorar el posicionamiento de la web en
-              el buscador sin influir en la accesibilidad de la misma.
+              Como el trabajo lo hicimos en pareja fue muy dinámico siempre uno
+              de los dos dábamos una solución y lograbámos el objetivo.
             </p>
           </div>
 
@@ -261,21 +272,20 @@
           <div class="flow grid-problemas-3">
             <h3 class="fs-700 f-str-75 f-wei-600">Lecciones aprendidas</h3>
             <p>
-              La forma de trabajar de manera eficiente e inteligente, para
-              lograr una mejor productividad y mejores resultados y mejor unión
-              del equipo.
+              Trabajar en equipo ha sido una gran enseñanza, es de mucha ventaja
+              porque se reparte el trabajo y todo fluye de una manera
+              organizada.
             </p>
 
             <p>
-              Revisar frecuentemente, si estamos avanzando en la dirección
-              correcta que necesitan nuestros clientes o si requiere que nos
-              adaptemos a ellos.
+              Nos ha dado tiempo de refactorar y mejorar el código de una manera
+              muy práctica. Revisando cada detalle en CSS, HTML semántico y la
+              accecibilidad para los lectores de pantalla.
             </p>
             <p>
-              Aprender de cada lección es uno de los aspectos más importantes de
-              la programación, pues así los errores y aciertos de los proyectos
-              quedan registrados para ser usados en futuras iniciativas, y de
-              esta manera se aprende a mejorar continuamente.
+              El proyecto se programó para terminar en un mes y con el empeño
+              que pusimos lo hemos terminado en 3 semanas, no es perfecto pero
+              funciona bien y he apredido mucho a buscar y encontrar soluciones.
             </p>
           </div>
         </div>

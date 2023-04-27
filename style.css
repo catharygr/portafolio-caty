@@ -695,7 +695,7 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1rem;
+  gap: 3rem;
   padding-block: var(--padding-block);
 }
 
@@ -704,6 +704,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    gap: 1rem;
   }
   .proyecto-detalles > * {
     flex-basis: 200px;
@@ -776,7 +777,7 @@ footer {
 
 .grid-problemas-2 img {
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 5px 10px 0 hsl(var(--clr-asento-claro) / 0.6);
 }
 
 @media (min-width: 57rem) {
