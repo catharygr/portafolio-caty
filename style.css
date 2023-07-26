@@ -507,6 +507,7 @@ nav {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   overflow: hidden;
+  max-width: 30rem;
 }
 
 .card-contenido {
