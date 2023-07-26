@@ -117,22 +117,49 @@
         <div class="container grid descripcion-proyecto">
           <div class="grid-elem-1 flow">
             <h3 class="fs-700 f-str-75 f-wei-600">Propósito del proyecto</h3>
-            <p>El proyecto se ha dividido en tres fases:</p>
             <p>
-              En la primera (terminada), simplemente se ha copiado el diseño
-              existente en Squarespace pasándolo al Netlify y haciendo un código
-              base nuevo. En el proceso únicamente se ha añadido un nuevo
-              segmento hero con varias ofertas.
+              Organización personal: Permitir a los usuarios organizar y
+              administrar sus tareas diarias, eventos y recordatorios en un solo
+              lugar, lo que les ayuda a mejorar su productividad y eficiencia.
             </p>
             <p>
-              En la segunda parte (actualmente trabajando en este) se pasará el
-              código base a Eleventy (generador de páginas estáticas), la cual
-              ayudará con la reorganización de la web e implementación de un
-              CMS.
+              Recordatorios flexibles: Proporcionar una forma sencilla de
+              establecer recordatorios con opciones personalizables para fechas,
+              horas y frecuencia de repetición, permitiendo a los usuarios
+              adaptar los recordatorios a sus necesidades específicas.
             </p>
             <p>
-              En la tercera (por hacer), se creará un carrito de compra y se
-              conectará con la pasarela de pago Stripe.
+              Interfaz intuitiva: Ofrecer una interfaz de usuario amigable e
+              intuitiva que facilite la creación, edición y eliminación de
+              recordatorios sin complicaciones.
+            </p>
+            <p>
+              Personalización: Ofrecer opciones de personalización para los
+              usuarios, como elegir temas, colores o tipos de recordatorios,
+              para que se sientan cómodos usando la aplicación de acuerdo con
+              sus preferencias.
+            </p>
+            <p>
+              Experiencia móvil optimizada: Asegurar que la aplicación esté
+              diseñada y optimizada específicamente para dispositivos móviles,
+              brindando una experiencia de usuario fluida y receptiva.
+            </p>
+            <p>
+              Sincronización en la nube: Al utilizar Firebase Realtime Database,
+              la aplicación garantiza que los recordatorios estén sincronizados
+              en todos los dispositivos del usuario, lo que permite acceder a
+              ellos desde cualquier lugar.
+            </p>
+            <p>
+              Autenticación segura: Mediante Firebase Auth, se brinda a los
+              usuarios la posibilidad de acceder a la aplicación de manera
+              segura y protegida, garantizando la privacidad de sus datos.
+            </p>
+            <p>
+              Seguimiento y progreso: Permitir a los usuarios marcar tareas
+              completadas y realizar un seguimiento de su progreso con la
+              finalidad de mejorar su gestión del tiempo y el cumplimiento de
+              objetivos.
             </p>
           </div>
 
@@ -140,19 +167,33 @@
             <h3 class="fs-700 f-str-75 f-wei-600">Mi papel en el proyecto</h3>
             <p>En el proyecto trabajamos dos.</p>
             <p>
-              Mi papel en este proyecto ha sido encargarme de analizar el diseño
-              actual y transferirlo al nuevo código utilizando las últimas
-              tecnologías de CSS.
+              Desarrollo Frontend: Fui responsable de la implementación de la
+              interfaz de usuario utilizando React y React Router. Trabajé con
+              mi compañero para traducir los diseños en componentes funcionales
+              y asegurar una experiencia de usuario fluida y atractiva.
             </p>
             <p>
-              Posteriormente, revisar y depurar todo el código para eliminar
-              errores. Con esto hemos conseguido que la web mejore de una manera
-              completa y eficiente.
+              Integración de Firebase: Configuré la integración con Firebase,
+              implementando Firebase Auth para la autenticación de usuarios y
+              Firebase Realtime Database para almacenar y gestionar los
+              recordatorios de forma segura y en tiempo real.
             </p>
             <p>
-              Colaborar con mi compañero del proyecto para elaborar diseño y la
-              estructura para hacer que la página sea accesible y rápida ante
-              todo.
+              Gestión de Estados: Implementé hooks populares de React, como
+              useState, useEffect y useContext, para gestionar el estado de la
+              aplicación y mantener la coherencia de los datos en diferentes
+              componentes.
+            </p>
+            <p>
+              Funcionalidades Específicas: Trabajé en la creación de
+              características específicas de la aplicación, como la creación,
+              edición y eliminación de recordatorios, así como la visualización
+              detallada de un recordatorio específico.
+            </p>
+            <p>
+              Documentación: Documenté el código, funciones y componentes
+              importantes para facilitar la comprensión y futuras
+              actualizaciones del proyecto.
             </p>
           </div>
 
@@ -160,14 +201,14 @@
             <picture>
               <source
                 media="(max-width: 49.999rem)"
-                srcset="/assets/images/blancodent/proyecto-primera-peque.jpg"
+                srcset="/assets/images/proyecto/recordatorio-peque"
               />
               <source
                 media="(min-width: 50rem)"
-                srcset="/assets/images/blancodent/proyecto-primera-grande.png"
+                srcset="/assets/images/proyecto/recordatorio-grande.png"
               />
               <img
-                src="/assets/images/blancodent/proyecto-primera-peque.jpg"
+                src="/assets/images/proyecto/recordatorio-peque.png"
                 alt="Imágenes de la clínica"
               />
             </picture>
@@ -175,33 +216,46 @@
 
           <div class="grid-elem-4 flow">
             <h3 class="fs-700 f-str-75 f-wei-600">
-              Web stack y la explicación
+              Web stack y su explicación
             </h3>
             <p>
-              Teniendo el diseño existente en la primera fase nos hemos enfocado
-              en lo siguiente:
+              React: Una biblioteca de JavaScript utilizada para construir
+              interfaces de usuario interactivas y reutilizables. React permite
+              crear componentes que se actualizan dinámicamente en respuesta a
+              cambios de datos, lo que facilita el desarrollo de una interfaz de
+              usuario moderna y eficiente.
             </p>
 
             <p>
-              HTML: El uso de las etiquetas semánticas como section, main,
-              article, nav... con la intención de hacer la página accesible
-              desde las primeras líneas del nuevo código.
+              React Router: Una biblioteca que facilita la implementación de
+              enrutamiento en una aplicación de React. Con React Router, podemos
+              establecer diferentes rutas para diferentes páginas y navegar
+              entre ellas sin tener que recargar la página completa.
             </p>
             <p>
-              CSS: utilización de Flexbox y Grid por defecto para organizar
-              layout y transferir el diseño. Uso intensivo de variables CSS (con
-              valores por defecto) y de las clases útiles. Nuevas seudo clases
-              como por ejemplo :where() y :clamp().
+              Vite: Un entorno de desarrollo rápido que se centra en la
+              velocidad y la eficiencia. Vite permite una configuración sencilla
+              y un tiempo de compilación rápido, lo que mejora la productividad
+              del desarrollo web.
             </p>
             <p>
-              Uso de las propiedades modernas como backdrop-filter,
-              margin-inline, aspect-ratio…
+              useState, useEffect, useContext: Hooks de React que facilitan la
+              gestión del estado de la aplicación, el manejo de efectos
+              secundarios y el manejo de datos compartidos entre componentes.
             </p>
             <p>
-              JS: Implementación de la navegación tipo hamburger en pantallas
-              pequeñas vía aria-hidden: y aria-selected: atributos para que sea
-              accesible vía teclado. También implementación de un carrusel en la
-              sección de hero con promociones.
+              useParams: Un hook de React Router que permite acceder a los
+              parámetros de la URL en un componente. Es útil para extraer
+              información dinámica de la ruta actual. useNavigate: Un hook de
+              React Router que proporciona una función de navegación para
+              cambiar la URL programáticamente en lugar de utilizar enlaces
+              tradicionales.
+            </p>
+            <p>
+              react-feather: Una librería que proporciona una colección de
+              iconos SVG. Esta librería se utiliza para mejorar la estética de
+              la aplicación y facilitar la inclusión de iconos en diferentes
+              partes de la interfaz de usuario.
             </p>
             <p>
               Git y GitHub: Uso continuo de git con varias ramas main/desarrollo
@@ -212,7 +266,7 @@
 
           <div class="grid-elem-5">
             <img
-              src="/assets/images/blancodent/proyecto-ultima.jpg"
+              src="/assets/images/proyecto/recordatorio-movil.png"
               alt="Imágenes de la clínica"
             />
           </div>
@@ -225,20 +279,30 @@
           <div class="flow grid-problemas-1">
             <h3 class="fs-700 f-str-75 f-wei-600">Problemas y soluciones</h3>
             <p>
-              Inicialmente se trataba de una web estática pero el cliente cambió
-              de idea y también ha querido implementar un blog. Eso nos ha
-              llevado a decisiones de implementar la segunda fase (actual) de
-              utilizar Eleventy SSG que es ideal para un blog no muy complejo.
+              A medida que la aplicación creció en complejidad, la gestión del
+              estado se volvió más difícil. Para abordar este problema,
+              decidimos implementar el patrón de "levantamiento de estados" y
+              centralizar el estado de la aplicación en los componentes
+              principales utilizando React Context. Esto mejoró la claridad del
+              flujo de datos y facilitó el acceso a los datos compartidos entre
+              componentes.
             </p>
 
             <p>
-              También utilizaremos un plug-in para las imágenes que automatizará
-              la entrega de la imágenes en diferentes tamaños y formatos.
+              En ocasiones, surgieron problemas de sincronización entre los
+              datos en tiempo real de Firebase y la representación en la
+              interfaz de usuario. Para solucionar esto, implementamos un
+              sistema de escucha de eventos para refrescar automáticamente la
+              interfaz cuando se producían cambios en la base de datos de
+              Firebase. Además, optimizamos el código para evitar
+              actualizaciones innecesarias en la interfaz.
             </p>
             <p>
-              En la conversación con agente de SEO se han encontrado unos puntos
-              que serán corregidos para mejorar el posicionamiento de la web en
-              el buscador sin influir en la accesibilidad de la misma.
+              Garantizar que la aplicación se vea y funcione bien en diferentes
+              tamaños de pantalla y dispositivos fue un desafío. Utilizamos CSS
+              media queries y realizamos pruebas exhaustivas en dispositivos
+              móviles y de escritorio para lograr un diseño totalmente
+              responsivo.
             </p>
           </div>
 
@@ -246,14 +310,14 @@
             <picture>
               <source
                 media="(max-width: 56.999rem)"
-                srcset="/assets/images/blancodent/problemas-corto.png"
+                srcset="/assets/images/proyecto/recordatorio-peque.png"
               />
               <source
                 media="(min-width: 57rem)"
-                srcset="/assets/images/blancodent/problemas-largo.png"
+                srcset="/assets/images/proyecto/recordatorio-abajo.png"
               />
               <img
-                src="/assets/images/blancodent/problemas-corto.png"
+                src="/assets/images/proyecto/recordatorio-peque.png"
                 alt="Imágenes de la clínica"
               />
             </picture>
@@ -262,21 +326,31 @@
           <div class="flow grid-problemas-3">
             <h3 class="fs-700 f-str-75 f-wei-600">Lecciones aprendidas</h3>
             <p>
-              La forma de trabajar de manera eficiente e inteligente, para
-              lograr una mejor productividad y mejores resultados y mejor unión
-              del equipo.
+              Aprendí la importancia de realizar una planificación y un diseño
+              cuidadoso antes de comenzar a codificar. Tener una estructura
+              clara y una visión general de la arquitectura del proyecto ayuda a
+              evitar retrabajos y facilita la implementación de nuevas
+              características.
             </p>
 
             <p>
-              Revisar frecuentemente, si estamos avanzando en la dirección
-              correcta que necesitan nuestros clientes o si requiere que nos
-              adaptemos a ellos.
+              Descubrí que abordar la optimización del rendimiento desde el
+              inicio del proyecto es fundamental. Realizar optimizaciones
+              incrementales a medida que se agregan nuevas características ayuda
+              a mantener el rendimiento general de la aplicación y evita
+              problemas más difíciles de resolver en etapas posteriores.
             </p>
             <p>
-              Aprender de cada lección es uno de los aspectos más importantes de
-              la programación, pues así los errores y aciertos de los proyectos
-              quedan registrados para ser usados en futuras iniciativas, y de
-              esta manera se aprende a mejorar continuamente.
+              Me di cuenta de la importancia de probar la aplicación en
+              diferentes navegadores y dispositivos para garantizar una
+              experiencia uniforme para todos los usuarios. Utilizar
+              herramientas de compatibilidad y polyfills fue útil para abordar
+              problemas específicos de navegadores más antiguos.
+            </p>
+            <p>
+              Escuchar los comentarios de los usuarios y realizar
+              actualizaciones regulares ayuda a mantener la aplicación relevante
+              y en constante mejora.
             </p>
           </div>
         </div>
