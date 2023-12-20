@@ -843,21 +843,3 @@ footer {
   margin-top: 1rem;
   border-bottom: none;
 }
-
-@media (min-width: 60rem) {
-  .contactar {
-    flex-direction: row;
-    text-align: left;
-    gap: 3rem;
-  }
-  .contactar h3 {
-    flex-basis: 300px;
-    flex-shrink: 0;
-  }
-  .container-otros {
-    flex-direction: row;
-  }
-  .container-otros > * {
-    flex-basis: 50%;
-  }
-}
